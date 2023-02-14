@@ -16,16 +16,10 @@ AWS Amplify | AWS Cognito | AWS DynamoDB | AWS S3 Bucket
 <video width="180" controls>
     <source src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/video.mp4" type="video/mp4">
 </video>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p1.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p2.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p3.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p4.png" width="180"/>
 
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p5.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p6.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p7.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p8.png" width="180"/>
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p9.png" width="180"/>
+<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p1.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p2.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p3.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p4.png" width="180"/>
+
+<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p5.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p6.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p7.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p8.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p9.png" width="180"/>
 
 
 ## Potential updates
