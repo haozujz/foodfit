@@ -9,14 +9,14 @@ Track progress and trends across up to 6 months with a simple, easy-to-understan
 Interdependant data of recipes, plans, tracker and cache respond instantly and performantly to all database mutations.   
 Fully functional and scalable user identity and access system.
 
-iOS app. SwiftUI. UIKit. Combine. AWS Backend.
+iOS app. SwiftUI. UIKit. Combine. AWS Backend. 
 AWS Amplify | AWS Cognito | AWS DynamoDB | AWS S3 Bucket 
 
-"https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/video.mp4"
+<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p1.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p2.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p3.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p4.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p5.png" width="180"/>
 
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p1.png" width="200"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p2.png" width="200"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p3.png" width="200"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p4.png" width="200"/>
+<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p6.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p7.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p8.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p9.png" width="180"/>
 
-<img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p5.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p6.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p7.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p8.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p9.png" width="180"/>
+https://user-images.githubusercontent.com/79493809/218666427-dc140dc4-6b42-4b57-9987-a5776869aa7f.mp4  
 
 
 ## Potential updates
