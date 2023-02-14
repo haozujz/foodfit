@@ -1,0 +1,399 @@
+
+type Plan @aws_iam @aws_cognito_user_pools {
+  id: ID!
+  date: AWSDate!
+  breakfastItems: [String!]!
+  lunchItems: [String!]!
+  dinnerItems: [String!]!
+  otherItems: [String!]!
+  exerciseItems: [String!]!
+  exerciseMultipliers: [Float!]!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+  owner: String
+}
+
+enum RecipeType {
+  GRAIN
+  MEAT
+  VEGETABLE
+  SNACK
+  DRINK
+}
+
+type Recipe @aws_iam @aws_cognito_user_pools {
+  id: ID!
+  name: String!
+  image: String!
+  servingSize: Int!
+  cookingTime: Int!
+  calories: Int!
+  protein: Int!
+  carbs: Int!
+  fat: Int!
+  ingredients: [String!]!
+  methodSteps: [String!]!
+  recipeType: RecipeType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+  owner: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelPlanConnection @aws_iam @aws_cognito_user_pools {
+  items: [Plan]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelPlanFilterInput {
+  id: ModelIDInput
+  date: ModelStringInput
+  breakfastItems: ModelStringInput
+  lunchItems: ModelStringInput
+  dinnerItems: ModelStringInput
+  otherItems: ModelStringInput
+  exerciseItems: ModelStringInput
+  exerciseMultipliers: ModelFloatInput
+  and: [ModelPlanFilterInput]
+  or: [ModelPlanFilterInput]
+  not: ModelPlanFilterInput
+}
+
+type Query {
+  getPlan(id: ID!): Plan @aws_iam @aws_cognito_user_pools
+  listPlans(filter: ModelPlanFilterInput, limit: Int, nextToken: String): ModelPlanConnection @aws_iam @aws_cognito_user_pools
+  syncPlans(filter: ModelPlanFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelPlanConnection @aws_iam @aws_cognito_user_pools
+  getRecipe(id: ID!): Recipe @aws_iam @aws_cognito_user_pools
+  listRecipes(filter: ModelRecipeFilterInput, limit: Int, nextToken: String): ModelRecipeConnection @aws_iam @aws_cognito_user_pools
+  syncRecipes(filter: ModelRecipeFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelRecipeConnection @aws_iam @aws_cognito_user_pools
+}
+
+input ModelPlanConditionInput {
+  date: ModelStringInput
+  breakfastItems: ModelStringInput
+  lunchItems: ModelStringInput
+  dinnerItems: ModelStringInput
+  otherItems: ModelStringInput
+  exerciseItems: ModelStringInput
+  exerciseMultipliers: ModelFloatInput
+  and: [ModelPlanConditionInput]
+  or: [ModelPlanConditionInput]
+  not: ModelPlanConditionInput
+}
+
+input CreatePlanInput {
+  id: ID
+  date: AWSDate!
+  breakfastItems: [String!]!
+  lunchItems: [String!]!
+  dinnerItems: [String!]!
+  otherItems: [String!]!
+  exerciseItems: [String!]!
+  exerciseMultipliers: [Float!]!
+  _version: Int
+}
+
+input UpdatePlanInput {
+  id: ID!
+  date: AWSDate
+  breakfastItems: [String!]
+  lunchItems: [String!]
+  dinnerItems: [String!]
+  otherItems: [String!]
+  exerciseItems: [String!]
+  exerciseMultipliers: [Float!]
+  _version: Int
+}
+
+input DeletePlanInput {
+  id: ID!
+  _version: Int
+}
+
+type Mutation {
+  createPlan(input: CreatePlanInput!, condition: ModelPlanConditionInput): Plan @aws_iam @aws_cognito_user_pools
+  updatePlan(input: UpdatePlanInput!, condition: ModelPlanConditionInput): Plan @aws_iam @aws_cognito_user_pools
+  deletePlan(input: DeletePlanInput!, condition: ModelPlanConditionInput): Plan @aws_iam @aws_cognito_user_pools
+  createRecipe(input: CreateRecipeInput!, condition: ModelRecipeConditionInput): Recipe @aws_iam @aws_cognito_user_pools
+  updateRecipe(input: UpdateRecipeInput!, condition: ModelRecipeConditionInput): Recipe @aws_iam @aws_cognito_user_pools
+  deleteRecipe(input: DeleteRecipeInput!, condition: ModelRecipeConditionInput): Recipe @aws_iam @aws_cognito_user_pools
+}
+
+input ModelSubscriptionPlanFilterInput {
+  id: ModelSubscriptionIDInput
+  date: ModelSubscriptionStringInput
+  breakfastItems: ModelSubscriptionStringInput
+  lunchItems: ModelSubscriptionStringInput
+  dinnerItems: ModelSubscriptionStringInput
+  otherItems: ModelSubscriptionStringInput
+  exerciseItems: ModelSubscriptionStringInput
+  exerciseMultipliers: ModelSubscriptionFloatInput
+  and: [ModelSubscriptionPlanFilterInput]
+  or: [ModelSubscriptionPlanFilterInput]
+}
+
+type Subscription {
+  onCreatePlan(filter: ModelSubscriptionPlanFilterInput, owner: String): Plan @aws_subscribe(mutations: ["createPlan"]) @aws_iam @aws_cognito_user_pools
+  onUpdatePlan(filter: ModelSubscriptionPlanFilterInput, owner: String): Plan @aws_subscribe(mutations: ["updatePlan"]) @aws_iam @aws_cognito_user_pools
+  onDeletePlan(filter: ModelSubscriptionPlanFilterInput, owner: String): Plan @aws_subscribe(mutations: ["deletePlan"]) @aws_iam @aws_cognito_user_pools
+  onCreateRecipe(filter: ModelSubscriptionRecipeFilterInput, owner: String): Recipe @aws_subscribe(mutations: ["createRecipe"]) @aws_iam @aws_cognito_user_pools
+  onUpdateRecipe(filter: ModelSubscriptionRecipeFilterInput, owner: String): Recipe @aws_subscribe(mutations: ["updateRecipe"]) @aws_iam @aws_cognito_user_pools
+  onDeleteRecipe(filter: ModelSubscriptionRecipeFilterInput, owner: String): Recipe @aws_subscribe(mutations: ["deleteRecipe"]) @aws_iam @aws_cognito_user_pools
+}
+
+type ModelRecipeConnection @aws_iam @aws_cognito_user_pools {
+  items: [Recipe]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelRecipeTypeInput {
+  eq: RecipeType
+  ne: RecipeType
+}
+
+input ModelRecipeFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  image: ModelStringInput
+  servingSize: ModelIntInput
+  cookingTime: ModelIntInput
+  calories: ModelIntInput
+  protein: ModelIntInput
+  carbs: ModelIntInput
+  fat: ModelIntInput
+  ingredients: ModelStringInput
+  methodSteps: ModelStringInput
+  recipeType: ModelRecipeTypeInput
+  and: [ModelRecipeFilterInput]
+  or: [ModelRecipeFilterInput]
+  not: ModelRecipeFilterInput
+}
+
+input ModelRecipeConditionInput {
+  name: ModelStringInput
+  image: ModelStringInput
+  servingSize: ModelIntInput
+  cookingTime: ModelIntInput
+  calories: ModelIntInput
+  protein: ModelIntInput
+  carbs: ModelIntInput
+  fat: ModelIntInput
+  ingredients: ModelStringInput
+  methodSteps: ModelStringInput
+  recipeType: ModelRecipeTypeInput
+  and: [ModelRecipeConditionInput]
+  or: [ModelRecipeConditionInput]
+  not: ModelRecipeConditionInput
+}
+
+input CreateRecipeInput {
+  id: ID
+  name: String!
+  image: String!
+  servingSize: Int!
+  cookingTime: Int!
+  calories: Int!
+  protein: Int!
+  carbs: Int!
+  fat: Int!
+  ingredients: [String!]!
+  methodSteps: [String!]!
+  recipeType: RecipeType!
+  _version: Int
+}
+
+input UpdateRecipeInput {
+  id: ID!
+  name: String
+  image: String
+  servingSize: Int
+  cookingTime: Int
+  calories: Int
+  protein: Int
+  carbs: Int
+  fat: Int
+  ingredients: [String!]
+  methodSteps: [String!]
+  recipeType: RecipeType
+  _version: Int
+}
+
+input DeleteRecipeInput {
+  id: ID!
+  _version: Int
+}
+
+input ModelSubscriptionRecipeFilterInput {
+  id: ModelSubscriptionIDInput
+  name: ModelSubscriptionStringInput
+  image: ModelSubscriptionStringInput
+  servingSize: ModelSubscriptionIntInput
+  cookingTime: ModelSubscriptionIntInput
+  calories: ModelSubscriptionIntInput
+  protein: ModelSubscriptionIntInput
+  carbs: ModelSubscriptionIntInput
+  fat: ModelSubscriptionIntInput
+  ingredients: ModelSubscriptionStringInput
+  methodSteps: ModelSubscriptionStringInput
+  recipeType: ModelSubscriptionStringInput
+  and: [ModelSubscriptionRecipeFilterInput]
+  or: [ModelSubscriptionRecipeFilterInput]
+}
+

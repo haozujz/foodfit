@@ -1,0 +1,68 @@
+{
+    "UserAgent": "aws-amplify/cli",
+    "Version": "0.1.0",
+    "IdentityManager": {
+        "Default": {}
+    },
+    "AppSync": {
+        "Default": {
+            "ApiUrl": "https://wwxs3dfbvvew3mrf3k6vz5cnna.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+            "Region": "ap-northeast-1",
+            "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+            "ClientDatabasePrefix": "Recipes_AMAZON_COGNITO_USER_POOLS"
+        },
+        "Recipes_AWS_IAM": {
+            "ApiUrl": "https://wwxs3dfbvvew3mrf3k6vz5cnna.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+            "Region": "ap-northeast-1",
+            "AuthMode": "AWS_IAM",
+            "ClientDatabasePrefix": "Recipes_AWS_IAM"
+        }
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "ap-northeast-1:e754ce43-6131-400b-838e-5cbdd243d9f0",
+                "Region": "ap-northeast-1"
+            }
+        }
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "ap-northeast-1_c8tQ0cQlb",
+            "AppClientId": "2k70as52s3pogka2s4f1oq0hvk",
+            "Region": "ap-northeast-1"
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH",
+            "mfaConfiguration": "OFF",
+            "mfaTypes": [
+                "SMS"
+            ],
+            "passwordProtectionSettings": {
+                "passwordPolicyMinLength": 8,
+                "passwordPolicyCharacters": [
+                    "REQUIRES_LOWERCASE",
+                    "REQUIRES_NUMBERS",
+                    "REQUIRES_SYMBOLS",
+                    "REQUIRES_UPPERCASE"
+                ]
+            },
+            "signupAttributes": [],
+            "socialProviders": [],
+            "usernameAttributes": [
+                "EMAIL"
+            ],
+            "verificationMechanisms": [
+                "EMAIL"
+            ]
+        }
+    },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "recipes-storage52354-staging",
+            "Region": "ap-northeast-1"
+        }
+    }
+}

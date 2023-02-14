@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3recipesstorage",
+  "bucketName": "recipes-storage",
+  "policyUUID": "53926b1f",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

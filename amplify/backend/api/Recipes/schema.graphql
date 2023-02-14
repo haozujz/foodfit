@@ -1,0 +1,34 @@
+type Plan @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  date: AWSDate!
+  breakfastItems: [String!]!
+  lunchItems: [String!]!
+  dinnerItems: [String!]!
+  otherItems: [String!]!
+  exerciseItems: [String!]!
+  exerciseMultipliers: [Float!]!
+}
+
+enum RecipeType {
+  GRAIN
+  MEAT
+  VEGETABLE
+  SNACK
+  DRINK
+}
+
+type Recipe @model @auth(rules: [{allow: owner}]) {
+  id: ID!
+  name: String!
+  image: String!
+  servingSize: Int!
+  cookingTime: Int!
+  calories: Int!
+  protein: Int!
+  carbs: Int!
+  fat: Int!
+  ingredients: [String!]!
+  methodSteps: [String!]!
+  recipeType: RecipeType!
+}
+ 

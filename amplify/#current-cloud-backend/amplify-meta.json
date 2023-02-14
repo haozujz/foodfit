@@ -1,0 +1,114 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-recipes-staging-52354-authRole",
+      "UnauthRoleArn": "arn:aws:iam::227185273516:role/amplify-recipes-staging-52354-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::227185273516:role/amplify-recipes-staging-52354-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-recipes-staging-52354-deployment",
+      "UnauthRoleName": "amplify-recipes-staging-52354-unauthRole",
+      "StackName": "amplify-recipes-staging-52354",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:227185273516:stack/amplify-recipes-staging-52354/a9639c10-80ef-11ed-a00d-0e6181197d7b",
+      "AmplifyAppId": "dis58rdxxnhgl"
+    }
+  },
+  "api": {
+    "Recipes": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "Recipes"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authRecipes"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "ftlokr6vjndqrf4zp4tbvilnje",
+        "GraphQLAPIEndpointOutput": "https://wwxs3dfbvvew3mrf3k6vz5cnna.appsync-api.ap-northeast-1.amazonaws.com/graphql"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2023-02-07T07:14:18.315Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recipes-staging-52354-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiRecipes"
+      },
+      "lastPushDirHash": "1r1PExj3CNTtGe0KaIMIhr8Flt0="
+    }
+  },
+  "auth": {
+    "Recipes": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "ap-northeast-1_c8tQ0cQlb",
+        "AppClientIDWeb": "15q1vmejsmbkp16dnse141hqb2",
+        "AppClientID": "2k70as52s3pogka2s4f1oq0hvk",
+        "IdentityPoolId": "ap-northeast-1:e754ce43-6131-400b-838e-5cbdd243d9f0",
+        "UserPoolArn": "arn:aws:cognito-idp:ap-northeast-1:227185273516:userpool/ap-northeast-1_c8tQ0cQlb",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "Recipes"
+      },
+      "lastPushTimeStamp": "2023-02-07T07:14:18.260Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recipes-staging-52354-deployment/amplify-cfn-templates/auth/Recipes-cloudformation-template.json",
+        "logicalId": "authRecipes"
+      }
+    }
+  },
+  "storage": {
+    "s3recipesstorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "recipes-storage52354-staging",
+        "Region": "ap-northeast-1"
+      },
+      "lastPushTimeStamp": "2023-02-07T07:14:18.262Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recipes-staging-52354-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3recipesstorage"
+      }
+    }
+  }
+}
