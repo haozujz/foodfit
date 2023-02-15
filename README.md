@@ -7,7 +7,7 @@ Effortlessly plan daily meals and exercises for your personal calorie and nutrit
 Track progress and trends across up to 6 months with a simple, easy-to-understand user interface.  
 
 Interdependant data of recipes, plans, tracker and cache respond instantly and performantly to all database mutations.   
-Fully functional and scalable user identity and access system.
+Fully functional and scalable user authentication and authorization system.
 
 iOS app. SwiftUI. UIKit. Combine. AWS Backend.   
 AWS Amplify | AWS Cognito | AWS DynamoDB | AWS S3 Bucket  
