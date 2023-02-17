@@ -22,3 +22,4 @@ https://user-images.githubusercontent.com/79493809/218666427-dc140dc4-6b42-4b57-
  - Incorporate machine learning for single-click AI-generated nutritional information and daily goals
  - Implement notifications for periodic progress updates and triggered trend alerts
  - Consider unlocking individual pre-made recipe suggestions as a monetization system
+ - Implement identity federation
