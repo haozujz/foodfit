@@ -1,4 +1,4 @@
-# Cloud Recipes
+# FoodFit
 
 Cloud-based Recipe saver, Meal & Exercise planner and Nutrition tracker.
 
