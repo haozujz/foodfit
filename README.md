@@ -16,6 +16,8 @@ AWS Amplify | AWS Cognito | AWS DynamoDB | AWS S3 Bucket
 
 <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p1.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p2.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p3.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p4.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p5.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p6.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p7.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p8.png" width="180"/> <img src="https://raw.githubusercontent.com/haozujz/cloud-recipes/master/preview/p9.png" width="180"/>
 
+## Video
+
 https://user-images.githubusercontent.com/79493809/218666427-dc140dc4-6b42-4b57-9987-a5776869aa7f.mp4  
 
 
